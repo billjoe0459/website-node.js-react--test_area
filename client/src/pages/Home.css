@@ -1,0 +1,60 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0px 0px 15px rgba(20, 0, 20, 0);
+  transition: box-shadow 0.4s ease;
+}
+.read-the-docs:hover {
+  box-shadow: 0px 0px 25px rgba(20, 0, 20, 0.5);
+}
+
+.button-left, .button-right {
+  transition: transform 0.3s ease;
+}
+
+/* 1. Standard Hover: Scale the one being touched */
+.button-left:hover, .button-right:hover {
+  transform: scale(1.15);
+}
+
+/* 2. Move RIGHT when LEFT is hovered */
+.button-left:hover + .button-right {
+  transform: translateX(10px);
+}
+
+/* 3. Move LEFT when RIGHT is hovered (Backward Selection) */
+.button-left:has(+ .button-right:hover) {
+  transform: translateX(-10px);
+}
