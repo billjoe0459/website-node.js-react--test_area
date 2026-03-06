@@ -63,6 +63,7 @@ stats:
 world-settings:
   default:
     verbose: true
+    mob-spawn-range: 4
     growth:
       cactus-modifier: 100
       cane-modifier: 100
@@ -109,7 +110,6 @@ world-settings:
     max-tick-time:
       tile: 50
       entity: 50
-    mob-spawn-range: 4
     squid-spawn-range:
       min: 45.0
     view-distance: 3
